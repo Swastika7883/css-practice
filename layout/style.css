@@ -1,0 +1,152 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:black ;
+ 
+    
+}
+.big-container {
+    display: flex;
+    margin-top: 80px; /* Push content below navbar */
+}
+
+
+.home{
+    height: 50px;
+    width: 50px;
+    background-color: aliceblue;
+    border-radius: 30px;
+
+}
+.search{
+    height: 40px;
+    width: 350px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+    .full-screen{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+.nav{
+    top: 0;
+    display: flex;
+    height: 80px;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.number-1 {
+    flex-shrink: 0;            /* Don't let it shrink */
+    width: 100px;
+    height: calc(100vh - 80px); /* Adjust height to avoid overlap with fixed navbar */
+    background-color: rgb(41, 39, 45);
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+
+
+/* .number-1{
+    border-radius: 20px;
+    height: 100vh;
+    width: 100px;
+    background-color: rgb(41, 39, 45);
+    margin-left: 10px;
+} */
+
+.number-2 {
+    padding: 40px;
+    background-color: rgb(36, 36, 38);
+    flex-grow: 1;              /* Let it take remaining space */
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    overflow: hidden;
+}
+
+
+/* 
+.number-2{
+    padding: 40px;
+    background-color: rgb(36, 36, 38);
+    width: 100%;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+} */
+
+
+
+.crcles {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;  /* Important for scrolling */
+    gap: 10px;                    /* Some spacing between boxes */
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+.cc{
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 50px; /* Ensure they stay 200px */
+    height: 50px;
+    background-color: rgb(130, 122, 137);
+    font-size: 40px;
+    border-radius: 30px;
+    margin: 6px;
+
+}
+
+
+
+.new {
+    display: flex;
+    justify-content: flex-start;  /* Important for scrolling */
+    gap: 10px;                    /* Some spacing between boxes */
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 10px;
+    margin-top: 10px;
+}
+
+.new::-webkit-scrollbar {
+    height: 8px;
+}
+
+.new::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 4px;
+}
+
+/* .box{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(130, 122, 137);
+    font-size: 40px;
+    border-radius: 12px;
+} */
+
+.box {
+    flex: 0 0 auto; /* Prevent shrinking */
+    min-width: 200px; /* Ensure they stay 200px */
+    height: 200px;
+    background-color: rgb(130, 122, 137);
+    font-size: 40px;
+    border-radius: 12px;
+}
