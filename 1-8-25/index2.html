@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        .nav{
+            background-color: rgb(0, 0, 0);
+            height: 3em;
+            padding-right: 20px;
+            margin: 10px;
+            
+
+        }
+        li:first-child{
+            color: orange;
+        }
+        
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding-top: 1em;
+            color: aliceblue;
+            
+        }
+        button{
+            background-color: orange;
+            color: aliceblue;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 🧑‍🚀 Practice Set 3
+Q1:
+Create a div with height & width of 100px.
+Set its background color to green & the border 
+radius to 50%.
+
+Q2:
+Create the following navbar:
+(The image shows a black horizontal navbar with the 
+following items: amazon.in (highlighted), Account, My Cart,
+ Contact Us, a search bar with placeholder text
+  “search Amazon.in” and a yellow "Search" button.) -->
+
+
+
+    <div class="nav">
+        <ul>
+            <li id="first-item">amazon.in</li>
+            <li class="items">Account</li>
+            <li class="items">MyCart</li>
+            <li class="items">Contact Us</li>
+            <div class="search">
+                <input type="text" placeholder="search Amazon.in">
+                <button>Search</button>
+            </div>
+        </ul>
+    </div>
+    <div id="box">
+
+    </div>
+    
+</body>
+</html>
