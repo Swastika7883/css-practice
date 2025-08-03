@@ -9,59 +9,111 @@
 <body>
     <div class="full-screen">
         <!-- nav -------------->
-    <div class="nav">
-        <div class="home">1</div>
-        <div class="search">2</div>
-    </div>
 
-    <!-- Two boxes -->
-    <div class="big-container">
-        <!-- taller vertical -->
-         <div class="number-1">
+        <div class="nav">
+            <div class="home">1</div>
+            <div class="search">2</div>
+        </div>
 
-               <div class="circles">
-    <div class="cc">1</div>
-    <div class="cc">1</div>
-    <div class="cc">1</div>
-    <div class="cc">1</div>
-    <div class="cc">1</div>
-   
-   
-</div>
-         </div>
+        <!-- Two boxes -->
+        <div class="big-container">
+            <!-- taller vertical -->
+            <div class="number-1">
+                <div class="circles">
+                    <div class="cc">1</div>
+                    <div class="cc">1</div>
+                    <div class="cc">1</div>
+                    <div class="cc">1</div>
+                    <div class="cc">1</div>
+                </div>
+            </div>
 
+            <!-- Horizontal -->
+            <div class="number-2">
+                <p style="color: aliceblue;">Made for</p>
+                <p style="color: aliceblue; font-size: 25px; font-weight: 900;">Swastika bera</p>
 
-         <!-- Horizontal -->
-        <div class="number-2">
-            <p style="color: aliceblue;">Made for</p>
-            <p style="color: aliceblue; font-size: 25px; font-weight: 900;">Swastika bera</p>
-    <div class="new">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div> 
-</div>
+                <!-- Slider 1 -->
+                <div class="carousel-wrapper">
+                    <button class="scroll-btn left"><</button>
+                    <div class="new carousel" id="carousel1">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                    </div>
+                    <button class="scroll-btn right">></button>
+                </div>
 
+                <!-- Slider 2 -->
+                <div class="carousel-wrapper">
+                    <button class="scroll-btn left"><</button>
+                    <div class="new carousel" id="carousel2">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                    </div>
+                    <button class="scroll-btn right">></button>
+                </div>
+
+                <!-- slider 3 -->
+
+                    <div class="carousel-wrapper">
+                    <button class="scroll-btn left"><</button>
+                    <div class="new carousel" id="carousel2">
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                        <div class="box">1</div>
+                        <div class="box">2</div>
+                        <div class="box">3</div>
+                        <div class="box">4</div>
+                        <div class="box">5</div>
+                    </div>
+                    <button class="scroll-btn right">></button>
+                </div>
+
+            </div>
         </div>
     </div>
 
+    <div class="container"></div>
 
-    </div>
-    
+    <!-- JS for scroll buttons -->
+    <script>
+        function setupCarousel(id) {
+            const carousel = document.getElementById(id);
+            const leftBtn = carousel.previousElementSibling;
+            const rightBtn = carousel.nextElementSibling;
 
-    
-    <div class="container">
+            const scrollAmount = 300;
 
+            leftBtn.onclick = () => {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            };
 
-</div>
-    
-    
-    
+            rightBtn.onclick = () => {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            };
+        }
+
+        setupCarousel("carousel1");
+        setupCarousel("carousel2");
+    </script>
 </body>
 </html>

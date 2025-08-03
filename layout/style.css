@@ -1,152 +1,163 @@
 * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-body{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color:black ;
- 
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color:  rgb(28, 28, 28);;
+}
+
 .big-container {
-    display: flex;
-    margin-top: 80px; /* Push content below navbar */
+  display: flex;
+  margin-top: 80px; /* Push content below navbar */
 }
 
-
-.home{
-    height: 50px;
-    width: 50px;
-    background-color: aliceblue;
-    border-radius: 30px;
-
+.home {
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
+  border-radius: 30px;
 }
-.search{
-    height: 40px;
-    width: 350px;
-    background-color: aliceblue;
-    border-radius: 20px;
-}
-    .full-screen{
-        display: flex;
-        flex-direction: column;
-       
-    }
 
-.nav{
-    top: 0;
-    display: flex;
-    height: 80px;
-    width: 100%;
-    background-color: black;
-    position: fixed;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    
+.search {
+  height: 40px;
+  width: 350px;
+  background-color: aliceblue;
+  border-radius: 20px;
+}
+
+.full-screen {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px; /* <-- Added this to avoid navbar overlap */
+}
+
+.nav {
+  top: 0;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(rgb(52, 52, 52), rgba(76, 69, 69, 0));
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
 }
 
 .number-1 {
-    flex-shrink: 0;            /* Don't let it shrink */
-    width: 100px;
-    height: calc(100vh - 80px); /* Adjust height to avoid overlap with fixed navbar */
-    background-color: rgb(41, 39, 45);
-    margin-left: 10px;
-    border-radius: 20px;
+   position: fixed;
+  top: 80px; /* Align below navbar */
+  left: 0;
+  width: 100px;
+  height: calc(100vh - 80px);
+  background-color: rgb(41, 39, 45);
+  border-radius: 0 20px 20px 0;
+  z-index: 999;
+  
 }
-
-
-
-/* .number-1{
-    border-radius: 20px;
-    height: 100vh;
-    width: 100px;
-    background-color: rgb(41, 39, 45);
-    margin-left: 10px;
-} */
 
 .number-2 {
-    padding: 40px;
-    background-color: rgb(36, 36, 38);
-    flex-grow: 1;              /* Let it take remaining space */
-    border-radius: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    overflow: hidden;
+   padding: 40px;
+  background-color: rgb(36, 36, 38);
+  flex-grow: 1;
+  border-radius: 20px;
+  margin-left: 120px; /* Leave space for the fixed .number-1 */
+  margin-right: 10px;
+  overflow: hidden;
 }
-
-
-/* 
-.number-2{
-    padding: 40px;
-    background-color: rgb(36, 36, 38);
-    width: 100%;
-    border-radius: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-} */
-
-
 
 .crcles {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;  /* Important for scrolling */
-    gap: 10px;                    /* Some spacing between boxes */
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 10px;
-    margin-top: 10px;
-}
-.cc{
-    flex: 0 0 auto; /* Prevent shrinking */
-    width: 50px; /* Ensure they stay 200px */
-    height: 50px;
-    background-color: rgb(130, 122, 137);
-    font-size: 40px;
-    border-radius: 30px;
-    margin: 6px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  margin-top: 10px;
 }
 
+.cc {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(130, 122, 137);
+  font-size: 40px;
+  border-radius: 30px;
+  margin: 6px;
+}
 
+/* Carousel container */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 10px;
+  margin-bottom: 60px;
+}
 
+/* Updated .new to act as a scrollable carousel */
 .new {
-    display: flex;
-    justify-content: flex-start;  /* Important for scrolling */
-    gap: 10px;                    /* Some spacing between boxes */
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 10px;
-    margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  margin: 0 30px;
 }
 
 .new::-webkit-scrollbar {
-    height: 8px;
+  display: none;
 }
 
 .new::-webkit-scrollbar-thumb {
-    background-color: grey;
-    border-radius: 4px;
+  background-color: grey;
+  border-radius: 4px;
 }
 
-/* .box{
-    height: 200px;
-    width: 200px;
-    background-color: rgb(130, 122, 137);
-    font-size: 40px;
-    border-radius: 12px;
-} */
+.new::-webkit-scrollbar-track {
+  background-color: rgb(203, 197, 197);
+  border-radius: 10px;
+}
 
 .box {
-    flex: 0 0 auto; /* Prevent shrinking */
-    min-width: 200px; /* Ensure they stay 200px */
-    height: 200px;
-    background-color: rgb(130, 122, 137);
-    font-size: 40px;
-    border-radius: 12px;
+  flex: 0 0 auto;
+  min-width: 150px;
+  height: 150px;
+  background-color: rgb(130, 122, 137);
+  font-size: 40px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(64, 52, 52, 0.2);
+  border: none;
+  font-size: 24px;
+  padding: 6px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  z-index: 10;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
 }
